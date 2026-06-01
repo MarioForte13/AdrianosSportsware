@@ -1035,4 +1035,5 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 @media (max-width: 768px) {
   .nav-links { display: none; }
   .hamburger { display: flex; }
+  .btn-login { display: none; }
 }
