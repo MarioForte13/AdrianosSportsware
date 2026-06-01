@@ -1031,3 +1031,8 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 [data-reveal][data-delay="100"] { transition-delay: 0.1s; }
 [data-reveal][data-delay="200"] { transition-delay: 0.2s; }
 [data-reveal][data-delay="300"] { transition-delay: 0.3s; }
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+}
