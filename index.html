@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adrianos Sportswear</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════ NAVBAR ═══════════════════════════════ -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-wrapper">
+          <img src="img/logo.jpg" alt="Adrianos Sportswear Logo" />
+        </div>
+        <h1 class="brand-name">Adrianos <em>Sportswear</em></h1>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="coleccion.html">Colección</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="btn-cart" aria-label="Carrito">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-count">0</span>
+        </button>
+        <button class="btn-login">
+          <i class="fas fa-user"></i>
+          <span>Iniciar sesión</span>
+        </button>
+        <button class="hamburger" aria-label="Menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu">
+      <ul>
+        <li><a href="coleccion.html">Colección</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#">Iniciar sesión</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+  <header class="hero">
+    <div class="hero-bg">
+      <img src="img/yisus.jpg" alt="Cerro Tetakawi, San Carlos" class="hero-img" />
+      <div class="hero-overlay"></div>
+      <div class="hero-grain"></div>
+    </div>
+
+    <div class="hero-content">
+      <span class="hero-tag">San Carlos · Guaymas · Sonora</span>
+      <p class="hero-title">
+        Hecho para<br />
+        <em>el sol</em> y la<br />
+        arena.
+      </p>
+      <p class="hero-sub">Adriano’s Sportswear es estilo, resistencia y pasión por lo outdoor 🏞️🔥 Viste con actitud, protege tu piel ☀️ y siente la frescura en cada aventura 🌊 ¡Haz que cada día cuente con Adriano’s! 🧢✨</p>
+      <div class="hero-cta">
+        <a href="#coleccion" class="btn-primary">Ver colección</a>
+        <a href="#nosotros" class="btn-ghost">Nuestra historia</a>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════ FRANJA ═══════════════════════════════ -->
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <span>San Carlos</span><span>✦</span>
+      <span>playera</span><span>✦</span>
+      <span>Tetakawi</span><span>✦</span>
+      <span>Verano eterno</span><span>✦</span>
+      <span>Adrianos Sportswear</span><span>✦</span>
+      <span>San Carlos</span><span>✦</span>
+      <span>Playa</span><span>✦</span>
+      <span>Tetakawi</span><span>✦</span>
+      <span>Verano eterno</span><span>✦</span>
+      <span>Adrianos Sportswear</span><span>✦</span>
+      <span>San Carlos</span><span>✦</span>
+      <span>Playa</span><span>✦</span>
+      <span>Tetakawi</span><span>✦</span>
+      <span>Verano eterno</span><span>✦</span>
+      <span>Adrianos Sportswear</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════ COLECCIÓN ═══════════════════════════════ -->
+  <section class="coleccion" id="coleccion" data-reveal>
+    <div class="section-header">
+      <span class="section-tag">Temporada 2025</span>
+      <h2>La <em>Colección</em></h2>
+      <p>Cada pieza cuenta una historia del litoral sonorense.</p>
+    </div>
+
+    <div class="products-grid">
+
+      <article class="product-card">
+        <div class="product-img-wrap">
+          <img src="img/prueba.jpg" alt="Playera Tetakawi" />
+          <div class="product-overlay">
+            <button class="btn-add">Agregar al carrito</button>
+          </div>
+          <span class="product-badge">Nuevo</span>
+        </div>
+        <div class="product-info">
+          <h3>Tetakawi Classic</h3>
+          <p class="product-desc">La esencia de San Carlos en una sola prenda.</p>
+          <div class="product-footer">
+            <span class="product-price">$350 MXN</span>
+            <div class="color-dots">
+              <span style="background:#fff;border:1.5px solid #ccc;"></span>
+              <span style="background:#F47B20;"></span>
+              <span style="background:#1a1a1a;"></span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card featured">
+        <div class="product-img-wrap">
+          <img src="img/prueba.jpg" alt="Playera Costa Brava" />
+          <div class="product-overlay">
+            <button class="btn-add">Agregar al carrito</button>
+          </div>
+          <span class="product-badge popular">Popular</span>
+        </div>
+        <div class="product-info">
+          <h3>Costa Brava</h3>
+          <p class="product-desc">Comoda, fresca y lista para cualquier aventura.</p>
+          <div class="product-footer">
+            <span class="product-price">$380 MXN</span>
+            <div class="color-dots">
+              <span style="background:#F5F0E8;border:1.5px solid #ddd;"></span>
+              <span style="background:#F47B20;"></span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-img-wrap">
+          <img src="img/prueba.jpg" alt="Playera Marea Alta" />
+          <div class="product-overlay">
+            <button class="btn-add">Agregar al carrito</button>
+          </div>
+        </div>
+        <div class="product-info">
+          <h3>Marea Alta</h3>
+          <p class="product-desc">Estilo relajado, calidad que se nota.</p>
+          <div class="product-footer">
+            <span class="product-price">$350 MXN</span>
+            <div class="color-dots">
+              <span style="background:#1a1a1a;"></span>
+              <span style="background:#F47B20;"></span>
+              <span style="background:#fff;border:1.5px solid #ccc;"></span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-img-wrap">
+          <img src="img/prueba.jpg" alt="Playera Atardecer" />
+          <div class="product-overlay">
+            <button class="btn-add">Agregar al carrito</button>
+          </div>
+          <span class="product-badge">Edición limitada</span>
+        </div>
+        <div class="product-info">
+          <h3>Atardecer Sonorense</h3>
+          <p class="product-desc">Inspirada en los cielos únicos del golfo.</p>
+          <div class="product-footer">
+            <span class="product-price">$420 MXN</span>
+            <div class="color-dots">
+              <span style="background:#F47B20;"></span>
+              <span style="background:#F5F0E8;border:1.5px solid #ddd;"></span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="ver-mas">
+      <a href="coleccion.html" class="btn-outline">Ver toda la colección</a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ NOSOTROS ═══════════════════════════════ -->
+  <section class="nosotros" id="nosotros" data-reveal>
+    <div class="nosotros-inner">
+      <div class="nosotros-img-block">
+        <img src="img/tetakawi.jpg" alt="San Carlos Sonora" />
+        <div class="nosotros-deco">
+          <span>Est. San Carlos</span>
+        </div>
+      </div>
+      <div class="nosotros-text">
+        <span class="section-tag">Nuestra historia</span>
+        <h2>Nacimos <em>frente al mar.</em></h2>
+        <p>Adrianos Sportswear nació en San Carlos, Sonora — entre el Tetakawi y el Mar de Cortés. Diseñamos playeras para quienes aman la vida costera: para tomar un café en el malecón, para el día de playa y para salir a pasear sin perder el estilo.</p>
+        <p>Cada pieza es pensada con la calidez de nuestra tierra y la frescura de nuestras costas.</p>
+        <div class="nosotros-stats">
+          <div>
+            <strong>100%</strong>
+            <span>Diseño local</span>
+          </div>
+          <div>
+            <strong>+10</strong>
+            <span>Diseños únicos</span>
+          </div>
+          <div>
+            <strong>Sonora</strong>
+            <span>Hecho con orgullo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ CTA BANNER ═══════════════════════════════ -->
+  <section class="cta-banner" data-reveal>
+    <div class="cta-inner">
+      <h2>¿Listo para el <em>verano?</em></h2>
+      <p>Encuentra tu playera perfecta y llévatela a cualquier playa.</p>
+      <a href="#coleccion" class="btn-primary">Comprar ahora</a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+  <footer class="footer" id="contacto">
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        <div class="footer-logo-wrap">
+          <img src="img/logo.jpg" alt="Adrianos Sportswear" />
+        </div>
+        <p>Playeras con alma costera.<br />San Carlos · Sonora · México.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="#coleccion">Colección</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#">Envíos</a></li>
+                        <!-- <li><a href="#">Preguntas frecuentes</a></li>  Se puede agregar o no--> 
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contacto</h4>
+        <p><i class="fas fa-map-marker-alt"></i> San Carlos, Sonora, México</p>
+        <p><i class="fab fa-whatsapp"></i> +52 622 174 3318</p>
+        <p><i class="fas fa-envelope"></i> hola@adrianossportswear.com</p>
+      </div>
+
+      <div class="footer-social">
+        <h4>Síguenos</h4>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/profile.php?id=61557560498212&ref=NONE_xav_ig_profile_page_web" class="social-btn facebook" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/adrianos.sportswear_/" class="social-btn instagram" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.tiktok.com/@adrianos_sports_wear?lang=es-419" class="social-btn tiktok" aria-label="TikTok">
+            <i class="fab fa-tiktok"></i>
+          </a>
+          <a href="https://wa.me/526221743318" class="social-btn whatsapp" aria-label="WhatsApp" target="_blank"> 
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Adrianos Sportswear. Todos los derechos reservados.</p>
+      <p>Diseñado con orgullo en San Carlos, Sonora 🌊</p>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

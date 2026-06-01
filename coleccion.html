@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Colección — Adrianos Sportswear</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="coleccion.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-wrapper">
+          <img src="img/logo.jpg" alt="Adrianos Sportswear Logo" />
+        </div>
+        <span class="brand-name">Adrianos <em>Sportswear</em></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="coleccion.html" class="active">Colección</a></li>
+        <li><a href="index.html#nosotros">Nosotros</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="btn-cart" aria-label="Carrito">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-count">0</span>
+        </button>
+        <button class="btn-login">
+          <i class="fas fa-user"></i>
+          <span>Iniciar sesión</span>
+        </button>
+        <button class="hamburger" aria-label="Menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu">
+      <ul>
+        <li><a href="coleccion.html">Colección</a></li>
+        <li><a href="index.html#nosotros">Nosotros</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+        <li><a href="#">Iniciar sesión</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══════════ PAGE HEADER ═══════════ -->
+  <div class="page-header">
+    <div class="page-header-inner">
+      <span class="section-tag">Temporada 2026</span>
+      <h1>La <em>Colección</em></h1>
+      <p>Cada pieza cuenta una historia del litoral sonorense.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════ SEARCH & FILTERS ═══════════ -->
+  <div class="search-bar-zone">
+    <div class="search-bar-inner">
+      <div class="search-input-wrap">
+        <i class="fas fa-search"></i>
+        <input type="text" id="searchInput" placeholder="Buscar playera..." autocomplete="off" />
+        <button class="clear-search" id="clearSearch" aria-label="Limpiar búsqueda">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <button class="btn-toggle-filters" id="toggleFilters" aria-expanded="false">
+        <i class="fas fa-sliders-h"></i>
+        <span>Filtros</span>
+        <span class="filter-count-badge" id="filterBadge" style="display:none;">0</span>
+        <i class="fas fa-chevron-down chevron-icon" id="chevronIcon"></i>
+      </button>
+      <span class="results-count" id="resultsCount"></span>
+    </div>
+
+    <!-- Panel de filtros -->
+    <div class="filters-panel" id="filtersPanel" aria-hidden="true">
+      <div class="filters-panel-inner">
+
+        <div class="filter-group">
+          <h3 class="filter-group-title"><i class="fas fa-medal"></i> Calidad</h3>
+          <div class="filter-options">
+            <label class="filter-chip">
+              <input type="checkbox" name="calidad" value="premium" />
+              <span><i class="fas fa-star"></i> Premium</span>
+            </label>
+            <label class="filter-chip">
+              <input type="checkbox" name="calidad" value="basica" />
+              <span><i class="far fa-star"></i> Básica</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="filter-divider"></div>
+
+        <div class="filter-group">
+          <h3 class="filter-group-title"><i class="fas fa-palette"></i> Color</h3>
+          <div class="filter-options color-options">
+            <label class="filter-color-chip" title="Azul">
+              <input type="checkbox" name="color" value="azul" />
+              <span class="color-swatch" style="background:#3B6FA0;"></span>
+              <span class="color-label">Azul</span>
+            </label>
+            <label class="filter-color-chip" title="Crema">
+              <input type="checkbox" name="color" value="crema" />
+              <span class="color-swatch" style="background:#F5F0E8; border:1.5px solid #ccc;"></span>
+              <span class="color-label">Crema</span>
+            </label>
+            <label class="filter-color-chip" title="Negro">
+              <input type="checkbox" name="color" value="negro" />
+              <span class="color-swatch" style="background:#111111;"></span>
+              <span class="color-label">Negro</span>
+            </label>
+            <label class="filter-color-chip" title="Rojo">
+              <input type="checkbox" name="color" value="rojo" />
+              <span class="color-swatch" style="background:#C0392B;"></span>
+              <span class="color-label">Rojo</span>
+            </label>
+            <label class="filter-color-chip" title="Blanco">
+              <input type="checkbox" name="color" value="blanco" />
+              <span class="color-swatch" style="background:#FFFFFF; border:1.5px solid #ccc;"></span>
+              <span class="color-label">Blanco</span>
+            </label>
+            <label class="filter-color-chip" title="Verde">
+              <input type="checkbox" name="color" value="verde" />
+              <span class="color-swatch" style="background:#2E7D50;"></span>
+              <span class="color-label">Verde</span>
+            </label>
+            <label class="filter-color-chip" title="Café">
+              <input type="checkbox" name="color" value="cafe" />
+              <span class="color-swatch" style="background:#7B4F2E;"></span>
+              <span class="color-label">Café</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="filter-actions">
+          <button class="btn-clear-filters" id="clearFilters">
+            <i class="fas fa-times"></i> Limpiar
+          </button>
+          <button class="btn-apply-filters" id="applyFilters">
+            Aplicar filtros
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Tags de filtros activos -->
+  <div class="active-filters-bar" id="activeFiltersBar" style="display:none;">
+    <div class="active-filters-inner">
+      <span class="active-filters-label">Filtros activos:</span>
+      <div class="active-tags" id="activeTags"></div>
+      <button class="btn-clear-all" id="clearAllTags">Limpiar todos <i class="fas fa-times"></i></button>
+    </div>
+  </div>
+
+  <!-- ═══════════ GRID (generado por JS) ═══════════ -->
+  <main class="coleccion-main">
+    <div class="col-products-grid" id="productsGrid"></div>
+    <div class="no-results" id="noResults" style="display:none;">
+      <i class="fas fa-search"></i>
+      <h3>Sin resultados</h3>
+      <p>Prueba con otros filtros o términos de búsqueda.</p>
+      <button class="btn-outline" id="resetSearch">Ver todo</button>
+    </div>
+  </main>
+
+  <!-- MODAL (se llena dinámicamente por JS) -->
+<div class="producto-modal" id="productoModal"></div>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="footer" id="contacto">
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        <div class="footer-logo-wrap">
+          <img src="img/logo.jpg" alt="Adrianos Sportswear" />
+        </div>
+        <p>Playeras con alma costera.<br />San Carlos · Sonora · México.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="coleccion.html">Colección</a></li>
+          <li><a href="index.html#nosotros">Nosotros</a></li>
+          <li><a href="#">Envíos</a></li><!--Esta linea si debería de estar pero no se q ponerle bien xd-->
+                        <!-- <li><a href="#">Preguntas frecuentes</a></li>  Se puede agregar o no--> 
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contacto</h4>
+        <p><i class="fas fa-map-marker-alt"></i> San Carlos, Sonora, México</p>
+        <p><i class="fab fa-whatsapp"></i> +52 622 174 3318</p>
+        <p><i class="fas fa-envelope"></i> hola@adrianossportswear.com</p>
+      </div>
+
+      <div class="footer-social">
+        <h4>Síguenos</h4>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/profile.php?id=61557560498212&ref=NONE_xav_ig_profile_page_web" class="social-btn facebook" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/adrianos.sportswear_/" class="social-btn instagram" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.tiktok.com/@adrianos_sports_wear?lang=es-419" class="social-btn tiktok" aria-label="TikTok">
+            <i class="fab fa-tiktok"></i>
+          </a>
+          <a href="https://wa.me/526221743318" class="social-btn whatsapp" aria-label="WhatsApp" target="_blank"> 
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Adrianos Sportswear. Todos los derechos reservados.</p>
+      <p>Diseñado con orgullo en San Carlos, Sonora 🌊</p>
+    </div>
+  </footer>
+
+  <script src="coleccion.js"></script>
+</body>
+</html>
