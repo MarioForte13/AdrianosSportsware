@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Adrianos Sportswear</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -17,7 +17,7 @@
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
         <div class="logo-wrapper">
-          <img src="img/logo.jpg" alt="Adrianos Sportswear Logo" />
+          <img src="img/logo.webp" alt="Adrianos Sportswear Logo" />
         </div>
         <h1 class="brand-name">Adrianos <em>Sportswear</em></h1>
       </a>
@@ -29,14 +29,11 @@
       </ul>
 
       <div class="nav-actions">
-        <button class="btn-cart" aria-label="Carrito">
+        <a href = "coleccion.html"class="btn-cart" aria-label="Carrito">
           <i class="fas fa-shopping-bag"></i>
-          <span class="cart-count">0</span>
-        </button>
-        <button class="btn-login">
-          <i class="fas fa-user"></i>
-          <span>Iniciar sesión</span>
-        </button>
+
+          <span>Crea tu carrito</span></a>
+
         <button class="hamburger" aria-label="Menú">
           <span></span><span></span><span></span>
         </button>
@@ -49,7 +46,7 @@
         <li><a href="coleccion.html">Colección</a></li>
         <li><a href="#nosotros">Nosotros</a></li>
         <li><a href="#contacto">Contacto</a></li>
-        <li><a href="#">Iniciar sesión</a></li>
+        <li><a href="/login/login.html">Iniciar sesión</a></li>
       </ul>
     </div>
   </nav>
@@ -57,7 +54,7 @@
   <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
   <header class="hero">
     <div class="hero-bg">
-      <img src="img/yisus.jpg" alt="Cerro Tetakawi, San Carlos" class="hero-img" />
+      <img src="img/yisus.webp" alt="Cerro Tetakawi, San Carlos" class="hero-img" />
       <div class="hero-overlay"></div>
       <div class="hero-grain"></div>
     </div>
@@ -75,7 +72,18 @@
         <a href="#nosotros" class="btn-ghost">Nuestra historia</a>
       </div>
     </div>
-
+    <div class="slider-wrapper" id="slider-wrapper">
+    <div class="slides" id="slides">
+      <div class="slide"><img src="/img/Muestra1.webp" alt="Foto 1" /></div>
+      <div class="slide"><img src="/img/Muestra2.webp" alt="Foto 2" /></div>
+      <div class="slide"><img src="/img/Muestra3.webp" alt="Foto 3" /></div>
+      <div class="slide"><img src="/img/Muestra4.webp" alt="Foto 4" /></div>
+    </div>
+    <!--<button class="nav-btn prev" onclick="cambiar(-1)">&#8249;</button>
+    <button class="nav-btn next" onclick="cambiar(1)">&#8250;</button>-->
+    <div class="dots" id="dots"></div>
+  </div>
+    
     <div class="hero-scroll">
       <span>Scroll</span>
       <div class="scroll-line"></div>
@@ -106,99 +114,28 @@
   <!-- ═══════════════════════════════ COLECCIÓN ═══════════════════════════════ -->
   <section class="coleccion" id="coleccion" data-reveal>
     <div class="section-header">
-      <span class="section-tag">Temporada 2025</span>
+      <span class="section-tag">Temporada 2026</span>
       <h2>La <em>Colección</em></h2>
       <p>Cada pieza cuenta una historia del litoral sonorense.</p>
     </div>
 
-    <div class="products-grid">
-
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="img/prueba.jpg" alt="Playera Tetakawi" />
-          <div class="product-overlay">
-            <button class="btn-add">Agregar al carrito</button>
-          </div>
-          <span class="product-badge">Nuevo</span>
-        </div>
-        <div class="product-info">
-          <h3>Tetakawi Classic</h3>
-          <p class="product-desc">La esencia de San Carlos en una sola prenda.</p>
-          <div class="product-footer">
-            <span class="product-price">$350 MXN</span>
-            <div class="color-dots">
-              <span style="background:#fff;border:1.5px solid #ccc;"></span>
-              <span style="background:#F47B20;"></span>
-              <span style="background:#1a1a1a;"></span>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card featured">
-        <div class="product-img-wrap">
-          <img src="img/prueba.jpg" alt="Playera Costa Brava" />
-          <div class="product-overlay">
-            <button class="btn-add">Agregar al carrito</button>
-          </div>
-          <span class="product-badge popular">Popular</span>
-        </div>
-        <div class="product-info">
-          <h3>Costa Brava</h3>
-          <p class="product-desc">Comoda, fresca y lista para cualquier aventura.</p>
-          <div class="product-footer">
-            <span class="product-price">$380 MXN</span>
-            <div class="color-dots">
-              <span style="background:#F5F0E8;border:1.5px solid #ddd;"></span>
-              <span style="background:#F47B20;"></span>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="img/prueba.jpg" alt="Playera Marea Alta" />
-          <div class="product-overlay">
-            <button class="btn-add">Agregar al carrito</button>
-          </div>
-        </div>
-        <div class="product-info">
-          <h3>Marea Alta</h3>
-          <p class="product-desc">Estilo relajado, calidad que se nota.</p>
-          <div class="product-footer">
-            <span class="product-price">$350 MXN</span>
-            <div class="color-dots">
-              <span style="background:#1a1a1a;"></span>
-              <span style="background:#F47B20;"></span>
-              <span style="background:#fff;border:1.5px solid #ccc;"></span>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card">
-        <div class="product-img-wrap">
-          <img src="img/prueba.jpg" alt="Playera Atardecer" />
-          <div class="product-overlay">
-            <button class="btn-add">Agregar al carrito</button>
-          </div>
-          <span class="product-badge">Edición limitada</span>
-        </div>
-        <div class="product-info">
-          <h3>Atardecer Sonorense</h3>
-          <p class="product-desc">Inspirada en los cielos únicos del golfo.</p>
-          <div class="product-footer">
-            <span class="product-price">$420 MXN</span>
-            <div class="color-dots">
-              <span style="background:#F47B20;"></span>
-              <span style="background:#F5F0E8;border:1.5px solid #ddd;"></span>
-            </div>
-          </div>
-        </div>
-      </article>
-
+    <div class="carousel-container">
+  <button class="carousel-btn prev-btn" id="prevBtn">&#8249;</button>
+  
+  <div class="carousel-track-wrapper">
+    <div class="carousel-track" id="carouselTrack">
+      <div class="carousel-item"><img src="img/Coleccion1.webp" alt="Playera 1" /></div>
+      <div class="carousel-item"><img src="img/Coleccion2.webp" alt="Playera 2" /></div>
+      <div class="carousel-item"><img src="img/Coleccion3.webp" alt="Playera 3" /></div>
+      <div class="carousel-item"><img src="img/Coleccion4.webp" alt="Playera 4" /></div>
+      <div class="carousel-item"><img src="img/Coleccion5.webp" alt="Playera 5" /></div>
+      <div class="carousel-item"><img src="img/Coleccion6.webp" alt="Playera 5" /></div>
+      <div class="carousel-item"><img src="img/Coleccion7.webp" alt="Playera 5" /></div>
     </div>
+  </div>
+
+  <button class="carousel-btn next-btn"id="nextBtn" >&#8250;</button>
+</div>
 
     <div class="ver-mas">
       <a href="coleccion.html" class="btn-outline">Ver toda la colección</a>
@@ -209,7 +146,7 @@
   <section class="nosotros" id="nosotros" data-reveal>
     <div class="nosotros-inner">
       <div class="nosotros-img-block">
-        <img src="img/tetakawi.jpg" alt="San Carlos Sonora" />
+        <img src="img/tetakawi.webp" alt="San Carlos Sonora" /> <!--Esta imagen es solo de muestra, hay q poner otra -->
         <div class="nosotros-deco">
           <span>Est. San Carlos</span>
         </div>
@@ -242,7 +179,7 @@
     <div class="cta-inner">
       <h2>¿Listo para el <em>verano?</em></h2>
       <p>Encuentra tu playera perfecta y llévatela a cualquier playa.</p>
-      <a href="#coleccion" class="btn-primary">Comprar ahora</a>
+      <a href="coleccion.html" class="btn-primary">Comprar ahora</a>
     </div>
   </section>
 
@@ -252,7 +189,7 @@
 
       <div class="footer-brand">
         <div class="footer-logo-wrap">
-          <img src="img/logo.jpg" alt="Adrianos Sportswear" />
+          <img src="img/logo.webp" alt="Adrianos Sportswear" />
         </div>
         <p>Playeras con alma costera.<br />San Carlos · Sonora · México.</p>
       </div>
@@ -260,17 +197,16 @@
       <div class="footer-links">
         <h4>Navegación</h4>
         <ul>
-          <li><a href="#coleccion">Colección</a></li>
+          <li><a href="coleccion.html">Colección</a></li>
           <li><a href="#nosotros">Nosotros</a></li>
-          <li><a href="#">Envíos</a></li>
-                        <!-- <li><a href="#">Preguntas frecuentes</a></li>  Se puede agregar o no--> 
+          <!--<li><a href="#">Envíos</a></li> Tienes que preguntarle al adrian como esta el pedo para agregar esto -->
         </ul>
       </div>
 
       <div class="footer-contact">
         <h4>Contacto</h4>
         <p><i class="fas fa-map-marker-alt"></i> San Carlos, Sonora, México</p>
-        <p><i class="fab fa-whatsapp"></i> +52 622 174 3318</p>
+        <p><a href="https://wa.me/526221743318"  target="_blank"> <i class="fab fa-whatsapp"></i><span style="margin-left: 8px;">+52 622 174 3318</span></a></p>
         <p><i class="fas fa-envelope"></i> hola@adrianossportswear.com</p>
       </div>
 
@@ -286,9 +222,6 @@
           <a href="https://www.tiktok.com/@adrianos_sports_wear?lang=es-419" class="social-btn tiktok" aria-label="TikTok">
             <i class="fab fa-tiktok"></i>
           </a>
-          <a href="https://wa.me/526221743318" class="social-btn whatsapp" aria-label="WhatsApp" target="_blank"> 
-            <i class="fab fa-whatsapp"></i>
-          </a>
         </div>
       </div>
 
@@ -299,6 +232,7 @@
       <p>Diseñado con orgullo en San Carlos, Sonora 🌊</p>
     </div>
   </footer>
+
   <script src="main.js"></script>
 </body>
 </html>

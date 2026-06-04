@@ -78,5 +78,82 @@ document.addEventListener('DOMContentLoaded', () => {
     // Fallback para navegadores viejos
     revealEls.forEach(el => el.classList.add('revealed'));
   }
- 
+  
+  /*  ══════════════════════════════════
+     4. SLIDE DE IMG
+  ══════════════════════════════════ */
+    const total = 4;         // Número de imágenes
+    const intervalo = 3000;  // Milisegundos entre cada cambio (3 segundos)
+    let actual = 0;
+    let timer;
+
+    // Crear puntos de navegación dinámicamente
+    const dotsEl = document.getElementById('dots');
+    for (let i = 0; i < total; i++) {
+      const d = document.createElement('div');
+      d.className = 'dot' + (i === 0 ? ' active' : '');
+      d.onclick = () => irA(i);
+      dotsEl.appendChild(d);
+    }
+
+    function irA(n) {
+      actual = (n + total) % total;
+      document.getElementById('slides').style.transform = `translateX(-${actual * 100}%)`;
+      document.querySelectorAll('.dot').forEach((d, i) => {
+        d.classList.toggle('active', i === actual);
+      });
+    }
+
+    function cambiar(dir) {
+      irA(actual + dir);
+      reiniciarTimer(); // Reinicia el temporizador al hacer clic
+    }
+
+    function reiniciarTimer() {
+      clearInterval(timer);
+      timer = setInterval(() => irA(actual + 1), intervalo);
+    }
+
+    // Iniciar el autoplay
+    reiniciarTimer();
+
+    /*===============================
+    CARRUSEL COLECCION
+    ==================================*/ 
+const carouselTrack = document.getElementById('carouselTrack');
+let carouselIndex = 0;
+
+function actualizarCarousel() {
+  if (!carouselTrack) return;
+  const items = [...carouselTrack.querySelectorAll('.carousel-item')];
+  if (!items.length) return;
+
+  const itemW = 300; // mismo valor que el CSS
+  const gap = 24;
+  const wrapperW = carouselTrack.parentElement.offsetWidth;
+
+  // Centrar el item activo
+  const offset = (wrapperW / 2) - (itemW / 2) - (carouselIndex * (itemW + gap));
+  carouselTrack.style.transform = `translateX(${offset}px)`;
+
+  items.forEach((item, i) => {
+    const dist = Math.abs(i - carouselIndex);
+    item.classList.toggle('active', i === carouselIndex);
+    item.style.opacity = dist === 0 ? '1' : dist === 1 ? '0.4' : '0.2';
+    item.style.transform = dist === 0 ? 'scale(1)' : 'scale(0.88)';
+  });
+}
+
+function moverCarousel(dir) {
+  if (!carouselTrack) return;
+  const total = carouselTrack.querySelectorAll('.carousel-item').length;
+  carouselIndex = (carouselIndex + dir + total) % total;
+  actualizarCarousel();
+}
+
+document.getElementById('prevBtn')?.addEventListener('click', () => moverCarousel(-1));
+document.getElementById('nextBtn')?.addEventListener('click', () => moverCarousel(1));
+
+actualizarCarousel();
+window.addEventListener('resize', actualizarCarousel);
 });

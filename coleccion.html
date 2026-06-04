@@ -18,7 +18,7 @@
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
         <div class="logo-wrapper">
-          <img src="img/logo.jpg" alt="Adrianos Sportswear Logo" />
+          <img src="img/logo.webp" alt="Adrianos Sportswear Logo" />
         </div>
         <span class="brand-name">Adrianos <em>Sportswear</em></span>
       </a>
@@ -31,11 +31,9 @@
         <button class="btn-cart" aria-label="Carrito">
           <i class="fas fa-shopping-bag"></i>
           <span class="cart-count">0</span>
+          <span>Carrito</span>
         </button>
-        <button class="btn-login">
-          <i class="fas fa-user"></i>
-          <span>Iniciar sesión</span>
-        </button>
+        
         <button class="hamburger" aria-label="Menú">
           <span></span><span></span><span></span>
         </button>
@@ -182,7 +180,7 @@
 
       <div class="footer-brand">
         <div class="footer-logo-wrap">
-          <img src="img/logo.jpg" alt="Adrianos Sportswear" />
+          <img src="img/logo.webp" alt="Adrianos Sportswear" />
         </div>
         <p>Playeras con alma costera.<br />San Carlos · Sonora · México.</p>
       </div>
@@ -229,6 +227,33 @@
       <p>Diseñado con orgullo en San Carlos, Sonora 🌊</p>
     </div>
   </footer>
+  <!-- OVERLAY -->
+<div class="cart-overlay" id="cartOverlay"></div>
+
+<!-- CARRITO LATERAL -->
+<aside class="cart-sidebar" id="cartSidebar" aria-label="Carrito de compras">
+  <div class="cart-header">
+    <h2>Tu <span>Carrito</span></h2>
+      <button class="cart-close-btn" id="cartCloseBtn" aria-label="Cerrar carrito">
+      <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty" id="cartEmpty">
+        <i class="fas fa-shopping-bag"></i>
+        <p>Tu carrito está vacío</p>
+      </div>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none;">
+    <div class="cart-total-row">
+        <span class="cart-total-label">Total</span>
+        <span class="cart-total-price" id="cartTotalPrice">$0 <span>MXN</span></span>
+      </div>
+      <a class="btn-whatsapp" id="btnWhatsapp" href="#" target="_blank">
+        <i class="fab fa-whatsapp"></i> Realizar pedido
+      </a>
+    </div>
+  </aside>
 
   <script src="coleccion.js"></script>
 </body>
