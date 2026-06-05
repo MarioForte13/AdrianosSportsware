@@ -156,4 +156,12 @@ document.getElementById('nextBtn')?.addEventListener('click', () => moverCarouse
 
 actualizarCarousel();
 window.addEventListener('resize', actualizarCarousel);
+
+/* ─── Carrito ─── */
+document.getElementById('cartCloseBtn')?.addEventListener('click', cerrarCarrito);
+document.getElementById('cartOverlay')?.addEventListener('click', cerrarCarrito);
+document.querySelector('.btn-cart')?.addEventListener('click', abrirCarrito);
+
+actualizarContadorNav();
+renderCarrito();
 });

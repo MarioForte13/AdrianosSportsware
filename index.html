@@ -29,9 +29,11 @@
       </ul>
 
       <div class="nav-actions">
-        <a href = "coleccion.html"class="btn-cart" aria-label="Carrito">
+        <button class="btn-cart" aria-label="Carrito">
           <i class="fas fa-shopping-bag"></i>
-          <span>Carrito</span></a>
+          <span class="cart-count">0</span>
+          <span>Carrito</span>
+        </button>
 
         <button class="hamburger" aria-label="Menú">
           <span></span><span></span><span></span>
@@ -231,6 +233,33 @@
     </div>
   </footer>
 
+  <!-- CARRITO LATERAL -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-sidebar" id="cartSidebar" aria-label="Carrito de compras">
+  <div class="cart-header">
+    <h2>Tu <span>Carrito</span></h2>
+      <button class="cart-close-btn" id="cartCloseBtn" aria-label="Cerrar carrito">
+      <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty" id="cartEmpty">
+        <i class="fas fa-shopping-bag"></i>
+        <p>Tu carrito está vacío</p>
+      </div>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none;">
+    <div class="cart-total-row">
+        <span class="cart-total-label">Total</span>
+        <span class="cart-total-price" id="cartTotalPrice">$0 <span>MXN</span></span>
+      </div>
+      <a class="btn-whatsapp" id="btnWhatsapp" href="#" target="_blank">
+        <i class="fab fa-whatsapp"></i> Realizar pedido
+      </a>
+    </div>
+  </aside>
+
   <script src="main.js"></script>
+  <script src="carrito.js"></script>
 </body>
 </html>
