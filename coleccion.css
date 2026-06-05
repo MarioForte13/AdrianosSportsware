@@ -1301,6 +1301,6 @@
 @media (max-width: 480px) {
   .cart-sidebar { width: 100vw; }
   .cart-footer {
-    padding-bottom: 2.5rem;
+    padding-bottom: 5rem;
   }
 }
