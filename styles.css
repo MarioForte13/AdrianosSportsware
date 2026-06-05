@@ -1121,10 +1121,20 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 .logo-wrapper {
   transition: height 0.3s ease, width 0.3s ease, box-shadow 0.3s ease;
 }
- 
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0.4rem;
+  cursor: pointer;
+}
 /* ─── Hamburger spans transition ─── */
 .hamburger span {
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--black);
+  border-radius: 2px;
 }
  
 /* ─── Fade-in reveal ─── */
