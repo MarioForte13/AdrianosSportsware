@@ -1159,6 +1159,32 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   .hamburger { display: flex; }
   .btn-login { display: none; }
   .slider-wrapper { display: none; }
+  .nav-inner {
+    padding: 0 1rem;          /* menos padding lateral */
+    grid-template-columns: 1fr auto;  /* logo | acciones, sin columna central */
+    gap: 0.5rem;
+  }
+  .nav-actions {
+    gap: 0.5rem;
+    flex-shrink: 0;
+  }
+  .btn-cart > span:not(.cart-count) {
+    display: none;
+  }
+
+  .btn-cart {
+    padding: 0.4rem 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  .hero-content { padding: 0 1.5rem 0 1.5rem; }
+  .hero { padding-bottom: 5rem; }
+  .hero-scroll { display: none; }
+
+  .coleccion { padding: 4rem 1.25rem; }
+  .nosotros { padding: 4rem 1.25rem; }
+
+  .nosotros-stats { gap: 1.5rem; flex-wrap: wrap; }
 }
 /* ═══════════════════════════════════════════════════════════════
    CARRITO LATERAL
